@@ -13,13 +13,13 @@ tax_rate6 = 0.47
 sum6 = 54130
 tax_rate7 = 0.5
 sum7 = 54130
-A0 = 0
-A1 = (sum1 * tax_rate1)
-A2 = ((income - sum2) * tax_rate2)
-A3 = ((income - sum3) * tax_rate3)
-A4 = ((income - sum4) * tax_rate4)
-A5 = ((income - sum5) * tax_rate5)
-A6 = ((income - sum6) * tax_rate6)
+A0 = (sum1 * tax_rate1)
+A1 = ((income - sum1) * tax_rate2)
+A2 = ((income - sum2) * tax_rate3)
+A3 = ((income - sum3) * tax_rate4)
+A4 = ((income - sum4) * tax_rate5)
+A5 = ((income - sum5) * tax_rate6)
+A6 = ((income - sum6) * tax_rate7)
 A7 = ((income - sum7) * tax_rate7)
 # סכומים קבועים מראש
 Num1 = (6310 * 0.1)
@@ -28,7 +28,7 @@ Num3 = ((10000 - 9050) * 0.20)
 X = 631
 Y = 383.6
 Z = 190
-total_tax = 0
+
 if income <= sum1:
     print("אם אתה מרוויח:", income)
     total_tax = income * 0.1
@@ -49,6 +49,5 @@ elif income <= sum3:
     print(sum1 * 0.1)  # 6310 * 0.1
     print((sum2 - sum1) * 0.14)  # (9050 - 6310) * 0.14 חישוב כמה המדרגה השניה סכום קבוע
     print((income - sum2) * 0.20)  # (income - 9050) * 0.20
-    total_tax1 = (A1 + X + Y)
-    print(total_tax1, "this is total_tax")
-    print(Z)
+    total_tax1 = (A2 + X + Y)
+    print(total_tax1, "this is total_tax", A2, X, Y)
