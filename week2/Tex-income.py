@@ -28,9 +28,9 @@ Num3 = ((14530 - 9050) * 0.20)
 Num4 = (20200 - 14530) * 0.31
 Num5 = (42030 - 20200) * 0.35
 Nun6 = (54130 - 42030) * 0.47
-
+Num7 = (income - 54130) * 0.5
 if income <= sum1:
-    print("אם אתה מרוויח:", income)
+    print("I see that your salary less than ", sum1, "This means that you will pay 10% Tax", income)
     total_tax = income * 0.1
     print("המס שתשלם הוא....", total_tax)
     print("הסכום שנשאר לך בכיס הוא...", income * 0.9)
@@ -60,4 +60,14 @@ elif income <= sum5:
     print("I see that your salary is more than ", sum4, "This means that you will pay 47% Tax")
     total_tax = (Num1 + Num2 + Num3 + Num4 + Num5 + A4)
     print(total_tax, "this is total_tax", Num1, Num2, Num3, Num4, Num5, A5)
+    print("Your Total salary is ", (income - total_tax))
+elif income <= sum6:
+    print("I see that your salary is more than ", sum5, "This means that you will pay 47% Tax")
+    total_tax = (Num1 + Num2 + Num3 + Num4 + Num5 + Nun6 + A5)
+    print(total_tax, "this is total_tax", Num1, Num2, Num3, Num4, Num5, Nun6, A6)
+    print("Your Total salary is ", (income - total_tax))
+elif income > sum6:
+    print("I see that your salary is more than ", sum6, "This means that you will pay 50% Tax")
+    total_tax = (Num1 + Num2 + Num3 + Num4 + Num5 + Nun6 + Num7 + A6)
+    print(total_tax, "this is total_tax", Num1, Num2, Num3, Num4, Num5, Nun6, Num7, A7)
     print("Your Total salary is ", (income - total_tax))
