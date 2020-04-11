@@ -22,12 +22,12 @@ A5 = ((income - sum5) * tax_rate6)
 A6 = ((income - sum6) * tax_rate7)
 A7 = ((income - sum7) * tax_rate7)
 # סכומים קבועים מראש
-Num1 = (6310 * 0.1)
+Num1 = (6310 * 0.1)  # income equal or less then 6310
 Num2 = ((9050 - 6310) * 0.14)
-Num3 = ((10000 - 9050) * 0.20)
-X = 631
-Y = 383.6
-Z = 190
+Num3 = ((14530 - 9050) * 0.20)
+Num4 = (20200 - 14530) * 0.31
+Num5 = (42030 - 20200) * 0.35
+Nun6 = (54130 - 42030) * 0.47
 
 if income <= sum1:
     print("אם אתה מרוויח:", income)
@@ -37,17 +37,27 @@ if income <= sum1:
     print()
     "מדרגת מס ראשונה 10%"
 elif income <= sum2:
-    print("זהו סכום גבוה מ 6310 ולכן מצטרפת אלייך מדרגת מס נוספת של 14% ")
-    print(sum1 * 0.1)
-    print((income - sum1) * 0.14)
-    print(A1, "A1")
+    print("I see that your salary is more than ", sum1, 'This means that you will pay 14% Tax')
     total_tax = ((income - sum1) * 0.14) + (sum1 * 0.1)
-    "מדרגת מס ראשונה 10%+שניה 14%"
     print(total_tax)
+    print("Your Total salary is ", (income - total_tax))
 elif income <= sum3:
-    print("זהו סכום גבוה מ 9050 ולכן מצטרפת אלייך מדרגת מס נוספת של 20% ")
-    print(sum1 * 0.1)  # 6310 * 0.1
-    print((sum2 - sum1) * 0.14)  # (9050 - 6310) * 0.14 חישוב כמה המדרגה השניה סכום קבוע
-    print((income - sum2) * 0.20)  # (income - 9050) * 0.20
-    total_tax1 = (A2 + X + Y)
-    print(total_tax1, "this is total_tax", A2, X, Y)
+    print(" see that your salary is more than ", sum2, "This means that you will pay 20% Tax")
+    total_tax = (Num1 + Num2 + A2)
+    print(total_tax, "this is total_tax", Num1, Num2, A2)
+    print("Your Total salary is ", (income - total_tax))
+elif income <= sum4:
+    print("I see that your salary is more than ", sum3, "This means that you will pay 31% Tax")
+    total_tax = (Num1 + Num2 + Num3 + A3)
+    print(total_tax, "this is total_tax", Num1, Num2, Num3, A3)
+    print("Your Total salary is ", (income - total_tax))
+elif income <= sum5:
+    print("I see that your salary is more than ", sum4, "This means that you will pay 35% Tax")
+    total_tax = (Num1 + Num2 + Num3 + Num4 + A4)
+    print(total_tax, "this is total_tax", Num1, Num2, Num3, Num4, A4)
+    print("Your Total salary is ", (income - total_tax))
+elif income <= sum5:
+    print("I see that your salary is more than ", sum4, "This means that you will pay 47% Tax")
+    total_tax = (Num1 + Num2 + Num3 + Num4 + Num5 + A4)
+    print(total_tax, "this is total_tax", Num1, Num2, Num3, Num4, Num5, A5)
+    print("Your Total salary is ", (income - total_tax))
