@@ -2,7 +2,7 @@ def by_3(number):
     checkfor3 = number % 3
     if checkfor3 != 0:
         print("can't be divided by 3 ")
-        result3 = False
+        result3 = number
         return result3
     else:
         print("can be divided by 3 ")
@@ -14,7 +14,7 @@ def by_5(result3):
     checkfor5 = result3 % 5
     if checkfor5 != 0:
         print("can't be divided by 5 ")
-        result5 = False
+        result5 = result3
         return result5
     else:
         print("can be divided by 5 ")
