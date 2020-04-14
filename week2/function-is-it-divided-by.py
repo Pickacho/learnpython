@@ -23,19 +23,19 @@ def by_5(result3):
 
 
 def print_the_results(result5, result3):
-    if result5 and result3 is True:
-        print("FizzBuzz")
-        return
-    elif result5 is True:
+    if result5 == "Buzz" and result3 == "Fizz":
+        print("Fizz Buzz")
+        newresult = "Fizz Buzz"
+        return newresult
+    elif result5 == "Buzz":
         print("Buzz")
-    elif result3 is True:
+    elif result3 == "Fizz":
         print("Fizz")
     else:
-        print("Non of them good for us")
+        print(magic_number, "This is the Else  working")
 
 
 magic_number = int(input("enter an number"))
-by_3(magic_number)
 magic_number3 = by_3(magic_number)
-magic_number5 = by_5(result3)
+magic_number5 = by_5(magic_number)
 print_the_results(magic_number5, magic_number3)
