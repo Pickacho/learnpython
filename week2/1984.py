@@ -1,0 +1,7 @@
+text1984 = input("Enter a sentence ")
+text1984 = text1984.lower()
+text1984 = text1984.replace('war', 'peace')
+text1984 = text1984.replace('freedom', 'slavery')
+text1984 = text1984.replace('ignorance', 'strength')
+text1984 = text1984.title()
+print(text1984)
