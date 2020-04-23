@@ -13,15 +13,17 @@ def kloze(user_input):
             counter += 1
     return counter
 
-
+biggest_index = 0
 the_real_big_one = 0
 biggest = 0
 i = 1
 while i < 1000:
     if kloze(i) > biggest:
         biggest = kloze(i)
-        print(f" if we pick the number {i}  we will need  {kloze(i)}  action to get to 1")
+        biggest_index = i
+
+        # print(f" if we pick the number {i}  we will need  {kloze(i)}  action to get to 1")
     i += 1
-    the_real_big_one = f"The number {i} need  {biggest} actions to get to 1 "
+    the_real_big_one = f"The number {biggest_index} need  {biggest} actions to get to 1 "
 
 print(the_real_big_one)
