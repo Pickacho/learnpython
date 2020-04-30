@@ -1,50 +1,5 @@
 code = "4812"
 try_count = 0
-
-
-def is_4_is_in_string(user_input):
-    if "4" in user_input:
-        print("True 4")
-        return True
-    else:
-        print("False 4")
-        return False
-
-
-def is_8_is_in_string(user_input):
-    if "8" in user_input:
-        print("True 8")
-        return True
-    else:
-        print("False 8")
-        return False
-
-
-def is_1_is_in_string(user_input):
-    if "1" in user_input:
-        print("True 1")
-        return True
-    else:
-        print("False 1")
-        return False
-
-
-def is_2_is_in_string(user_input):
-    if "2" in user_input:
-        print("True 2")
-        return True
-    else:
-        print("False 2")
-        return False
-
-
-def logic_test(user_input):
-    if is_4_is_in_string(user_input):
-        print("you have one key")
-
-#eight = is_8_is_in_string(user_input)
-
-
 print(code[0], "code[0]", code[1], "code[1]", code[2], "code[2]", code[3], "code[3]")
 # user_string = int(input("enter your number"))
 
@@ -67,4 +22,3 @@ while allow_user_to_enter_password:
             allow_user_to_enter_password = False
         elif user_string != code:
             print("Sorry you are wrong ", guesses_remaining, " guesses left before the safe will self distract")
-

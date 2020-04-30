@@ -1,5 +1,5 @@
 ##תוכנה זו תציג למשתמש ברכה ולאחר מכן תבקש ממנו משתמש וסיסמא ותגיב בהתאם למה שיכניס
-print("Dear user, welcome to our system")
+print("Dear user, wellcome to our system")
 print("Before you will be able to login you will need to first...")
 username = input("Enter your user name ")
 
