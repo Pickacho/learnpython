@@ -13,6 +13,7 @@ def kloze(user_input):
             counter += 1
     return counter
 
+
 biggest_index = 0
 the_real_big_one = 0
 biggest = 0
