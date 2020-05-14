@@ -34,8 +34,8 @@ while counter < 9:
     print(board[2])
     print(player % 2)
     counter += 1
-    list_num = int(input("pick a list_num"))
-    place_holder = int(input("pick a place_holder"))
+    list_num = int(input("pick a line"))
+    place_holder = int(input("pick a row"))
     if player == 1:
         marker = "0"
         try:
