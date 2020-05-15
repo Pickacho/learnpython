@@ -1,0 +1,22 @@
+---# Infrastructure demo yaml
+- hosts: redhat
+  remote_user: ansible
+  become: yes
+  become_method: sudo
+  connection: ssh
+  gather_facts: yes
+  vars:
+    username: ansible
+  tasks:
+  - name: install httpd service on all instances that belong to redhat
+    yum:
+      name: httpd
+      state: latest
+    notify:
+    - start httpd service
+  handlers:
+  - name : start httpd service
+    service:
+      name: httpd
+
+state: restarted
