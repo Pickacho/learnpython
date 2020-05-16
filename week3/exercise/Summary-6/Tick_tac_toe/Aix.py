@@ -20,6 +20,8 @@ bottom_line = var[2][0] == var[2][1] == var[2][2]
 # diagonal
 diagonalL_to_R = var[0][0] == var[1][1] == var[2][2]
 diagonalR_to_L = var[0][2] == var[1][1] == var[0][0]
+
+
 ####################################################################
 # Full Board with no victory
 def full_Board_with_no_victory(status, counter):
@@ -39,6 +41,7 @@ def coordinates(list_num, place_holder):
         place_holder = input("pick a place_holder")
     else:
         print("else")
+
 
 def check_board(board):
     print(board[0][0])
@@ -93,6 +96,5 @@ def check_board(board):
 # print(check_board(var))
 
 coordinates(1, 2)
-
 
 print('end')
