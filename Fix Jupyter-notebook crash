@@ -1,0 +1,51 @@
+$: jupyter-notebook
+Traceback (most recent call last):
+  File "/usr/local/bin/jupyter-notebook", line 8, in <module>
+    sys.exit(main())
+  File "/usr/local/lib/python3.8/dist-packages/jupyter_core/application.py", line 270, in launch_instance
+    return super(JupyterApp, cls).launch_instance(argv=argv, **kwargs)
+  File "/usr/local/lib/python3.8/dist-packages/traitlets/config/application.py", line 663, in launch_instance
+    app.initialize(argv)
+  File "<decorator-gen-7>", line 2, in initialize
+  File "/usr/local/lib/python3.8/dist-packages/traitlets/config/application.py", line 87, in catch_config_error
+    return method(app, *args, **kwargs)
+  File "/usr/local/lib/python3.8/dist-packages/notebook/notebookapp.py", line 1769, in initialize
+    self.init_webapp()
+  File "/usr/local/lib/python3.8/dist-packages/notebook/notebookapp.py", line 1451, in init_webapp
+    self.web_app = NotebookWebApplication(
+  File "/usr/local/lib/python3.8/dist-packages/notebook/notebookapp.py", line 153, in __init__
+    settings = self.init_settings(
+  File "/usr/local/lib/python3.8/dist-packages/notebook/notebookapp.py", line 269, in init_settings
+    nbextensions_path=jupyter_app.nbextensions_path,
+  File "/usr/local/lib/python3.8/dist-packages/notebook/notebookapp.py", line 1120, in nbextensions_path
+    from IPython.paths import get_ipython_dir
+  File "/usr/local/lib/python3.8/dist-packages/IPython/__init__.py", line 55, in <module>
+    from .core.application import Application
+  File "/usr/local/lib/python3.8/dist-packages/IPython/core/application.py", line 25, in <module>
+    from IPython.core import release, crashhandler
+  File "/usr/local/lib/python3.8/dist-packages/IPython/core/crashhandler.py", line 27, in <module>
+    from IPython.core import ultratb
+  File "/usr/local/lib/python3.8/dist-packages/IPython/core/ultratb.py", line 116, in <module>
+    from IPython.utils import path as util_path
+  File "/usr/local/lib/python3.8/dist-packages/IPython/utils/path.py", line 17, in <module>
+    from IPython.utils.process import system
+  File "/usr/local/lib/python3.8/dist-packages/IPython/utils/process.py", line 19, in <module>
+    from ._process_posix import system, getoutput, arg_split, check_pid
+  File "/usr/local/lib/python3.8/dist-packages/IPython/utils/_process_posix.py", line 23, in <module>
+    import pexpect
+  File "/usr/lib/python3/dist-packages/pexpect/__init__.py", line 75, in <module>
+    from .pty_spawn import spawn, spawnu
+  File "/usr/lib/python3/dist-packages/pexpect/pty_spawn.py", line 14, in <module>
+    from .spawnbase import SpawnBase
+  File "/usr/lib/python3/dist-packages/pexpect/spawnbase.py", line 224
+    def expect(self, pattern, timeout=-1, searchwindowsize=-1, async=False):
+                                                               ^
+SyntaxError: invalid syntax
+************************************************************************************************************************************************
+************************************************************************************************************************************************
+Try
+$pip uninstall pexpect
+$pip install pexpect
+
+
+
